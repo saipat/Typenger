@@ -1,15 +1,14 @@
 import Game from './game';
 
-export default class Play extends Game {
+class Play{
     constructor() {
-        super();
         this.message = '';
         this.points = 0;
         this.countdown = 5;
     }
 
     displayWords() {
-
+        
         let random = Game.pickEasyWord();
         console.log("the picked word:----> ", random);
 
@@ -27,15 +26,15 @@ export default class Play extends Game {
 
         //check the word with the array
 
-        //if the word is right, increment the points by 1
-        //for evry point animate
+          //if the word is right, increment the points by 1
+          //for evry point animate
 
-        //if the word is wrong, decrement the word by 1
-        //for evry point animate
+          //if the word is wrong, decrement the word by 1
+          //for evry point animate
     }
 
 
 }
 
 
-module.exports = Play;
+export default Play;

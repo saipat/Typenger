@@ -1,32 +1,21 @@
 import ScoreBoard from './score_board';
 import Play from './play';
+import Word from './words';
+import Timer from './timer';
 
-export default class Game {
+ class Game {
     constructor() {
-        this.isPlaying = false;
-        this.noOfErrors = 0;
-        this.correctTypes = 0;
-        this.time = 10;
-
-        this.easyWords = [
-            "Bottle", "Coffee", "Meanwhile", "Dianosur", "Pineapple", "Terrorist", "Acieve", "Retrive", "Opposite", "Significantly", "Treacherous", "Environment", "Immediately", "Independent"
-        ];
-
-        this.toughWords = [
-            "Santa's", "Abrogate", "Accomodate", "Indict", "Cementry", "Embarass", "Convalesce", "Carrabian", "Abnegation"
-        ];
+        this.word = new Word();
+        this.timer = new Timer();
+        this.scoreBoard = new ScoreBoard();
     }
 
-    pickEasyWord() {
-        const randomIndex = Math.floor(Math.random() * this.easyWords.length);
-        return this.easyWords[randomIndex];
+    play() {
+        let wordToDisplay = this.word.pickEasyWord();
+        console.log("pickEasyWord =====>>>> ", wordToDisplay);
     }
 
-
-    pickToughWord() {
-        const randomIndex = Math.floor(Math.random() * this.toughWords.length);
-        return this.toughWords[randomIndex];
-    }
+    
 
     init() {
         const game = document.querySelector('div.game');
@@ -34,3 +23,6 @@ export default class Game {
     }
 
 }
+
+
+export default Game;

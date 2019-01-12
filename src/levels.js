@@ -1,4 +1,4 @@
- export default class Level {
+class Level {
      constructore() {
          this.level_count = 0;
          this.speed = 0;
@@ -12,4 +12,4 @@
      }
  }
 
- module.exports = Level;
+export default Level;

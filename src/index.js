@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM fully loaded and parsed");
 
     const game = new Game();
-    console.log(game.pickEasyWord());
+    // console.log(game.pickEasyWord());
 
     const playButton = document.getElementById('play-btn');
     const instructions = document.querySelector('p.instructions');
@@ -32,19 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
     let count = 5;
 
     startButton.addEventListener('click', function (event) {
-        var interval = setInterval(function () {
-            console.log(--count);
-            if (count === 1) {
-                clearInterval(interval);
+        // var interval = setInterval(function () {
+        //     console.log(--count);
+        //     if (count === 1) {
+        //         clearInterval(interval);
 
-                const showOnStart = document.querySelector('#showOnStart');
+        //         const showOnStart = document.querySelector('#showOnStart');
 
-                if (showOnStart.className.includes('hidden')) {
-                    showOnStart.className = showOnStart.className.replace('hidden', '');
-                }
-                count = 5;
-            }
-        }, 400);
+        //         if (showOnStart.className.includes('hidden')) {
+        //             showOnStart.className = showOnStart.className.replace('hidden', '');
+        //         }
+        //         count = 5;
+        //     }
+        // }, 400);
+
+        game.play();
     });
 
 
