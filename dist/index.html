@@ -7,49 +7,53 @@
     <title>Typenger - JS Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
-    <!-- <script src="../src/game.js"></script>
-    <script src="../src/score_board.js"></script>
-    <script src="../src/play.js"></script> -->
-    <!-- <script type="text/javascript" src="./main.js"></script> -->
-
-    <script src="../src/logo.js"></script>
-    <script src="../src/animate_thor.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+    <!-- <script src="../src/logo.js"></script>
+    <script src="../src/animate_thor.js"></script> -->
 
 </head>
 
 <body class="main">
-    <img src="../images/original.gif" alt="avengers wallpaper" width="1430" height="740" class="wallpaper" />
+    <div id="bg">
+        <img src="../images/original.gif" alt="avengers wallpaper"/>
+    </div>
+    
     <div class="game">
-        <div>
+
+        <div class="title">
             <h1 class="game-title">Welcome to Typenger!</h1>
-            <div class="how-to">
-                <button id="play-btn" class="btn">How to play</button>
-                <button id="start-btn" class="btn">Start</button>
-                <button id="stop-btn" class="btn stop-btn">Stop</button>
-            </div>
-        </div>
-
-        <div class="controls">
-
-            <p class="instructions hidden" id="">You are Thor. The fate of the universe is in your hands! Type words
-                that are shown
-                to you correctly. For every mis-typed word, Thor will get a hit and every correctly typed word Thanos
-                will get a
-                hit.
+            <p class="instructions">You are Thor. The fate of the universe is in your hands! Type words that are shown to you correctly. For every mis-typed word, Thor will get a hit and every correctly typed word Thanos will get a hit.
                 <span>When you are ready, click start. Good Luck Thor!</span>
             </p>
+        </div>
+
+        <div>
+            <div class="how-to">
+                <button id="start-btn" class="btn">Start</button>
+                <button id="stop-btn" class="btn stop-btn">Stop</button>
+                <div >
+                    <div class="rules-input">
+                        <p class="rules">
+                            Type the word shown in <span id="seconds">5  </span>seconds.
+                        </p>
+                        <h1 id="current-word"></h1>
+                    </div>
+                    <div>
+                        <input type="text" className="player-input" id="word-input" placeholder="    Start typing" autofocus/>
+                        <p id="isWon-message"></p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
 
         <div id="showOnStart" class="hidden">
 
             <div class="countdown">
-                <p>
-                    Type the word shown in <span id="seconds">5 </span>seconds.
-
-                </p>
-                <h1 id="current-word"></h1>
-                <input type="text" className="player-input" id="word-input" placeholder="    Start typing" autofocus/>
-                <p id="isWon-message"></p>
+               
+                
+                
             </div>
 
             <div class="score-board">
@@ -73,14 +77,14 @@
 
     </div>
     <!-- <img src="images/tenor.gif" alt="thor gif" class="thor-gif"/> -->
-    <canvas id="coinAnimation" class="animation hidden2">
+    <!-- <canvas id="coinAnimation" class="animation hidden2">
 
-    </canvas>
+    </canvas> -->
 
     <!-- <img src="../images/tenor.gif" alt="thanos.gif" class="thanos-gif">  -->
-    <canvas id="ThorAnimation" class="thor-animation">
+    <!-- <canvas id="ThorAnimation" class="thor-animation">
 
-    </canvas>
+    </canvas> -->
     <script type="text/javascript" src="./main.js"></script>
 </body>
 

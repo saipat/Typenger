@@ -1,66 +1,64 @@
-.main {
-    position: relative;
+#bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 120%;
 }
 
-.hidden {
-    display: none;
-}
-
-.wallpaper {
-    position: relative;
+#bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
 }
 
 .game {
     position: absolute;
     top: 20px;
-    left: 10%;
+    left: 5%;
+    color: white;
+    font-family: 'Bangers';
 }
 
-#coinAnimation {
-    position: absolute;
-    top: 10%;
-    left: 82%;
+.title {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
 }
 
 .game-title {
-    color: white;
     width: 150%;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.instructions {
+    margin-left: -25%;
+    margin-right: 5%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+    text-shadow: 2px 2px blue;
+    letter-spacing: 0.8px;
 }
 
 .btn {
-    display: inline-block;
     border: 0.1em solid #FFFFFF;
-    padding: 7px 20px;
-    margin: 40px 0 70px 30px;
+    padding: 10px 36px;
+    margin: 38px 0 60px 9px;
     border-radius: 0.3em;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    color: #fac3ce;
-    background-color: #a41935;
-    /* text-align: center; */
-    /* transition: all 0.2s; */
-    -webkit-border-radius: 0.3em;
-    -moz-border-radius: 0.3em;
-    -ms-border-radius: 0.3em;
-    -o-border-radius: 0.3em;
-}
-
-.btn:hover {
-    color: #000000;
-    background-color: #FFFFFF;
-}
-
-#play-btn {
-    margin-left: 0;
-}
-
-@media all and (max-width:30em) {
-    btn {
-        display: block;
-        margin: 0.4em auto;
-    }
+    font-size: 20px;
+    color: black;
+    text-shadow: 1px 1px 0 #444;
+    background-color: #990000;
 }
 
 .how-to {
@@ -68,8 +66,70 @@
     flex-direction: row;
 }
 
-.instructions,
-.about,
+.rules-input{
+    margin-left: 17%;
+    display: flex;
+    flex-direction: row;
+}
+
+.rules {
+    padding-left: 50%;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.countdown {
+    color: white;
+    width: 50%;
+    line-height: 1.4;
+    margin-top: -30px;
+    font-size: 18px;
+
+}
+
+#current-word {
+    color: red;
+    text-shadow: 2px 2px white;
+    font-family: 'Graduate';
+    letter-spacing: 11px;
+    font-size: 40px;
+    position: fixed;
+    text-align: right;
+    right: 10%;
+    top: 17%;
+}
+
+#word-input {
+    color: blue;
+    padding: 1% 7%;
+    margin-left: 41%;
+    margin-top: 1%;
+    position: fixed;
+    font-size: 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#seconds {
+    color: red;
+}
+
+
+
+
+.btn:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    border: 4px solid #990000;
+}
+
+
+/* .how-to {
+    display: flex;
+    flex-direction: row;
+} */
+
+/*.about,
 .countdown {
     color: white;
     width: 50%;
@@ -83,7 +143,7 @@
     top: 10%;
     left: 150%;
     width: 80%;
-}
+} 
 
 #current-word {
     position: absolute;
@@ -112,7 +172,7 @@ h4 {
     padding: 5% 45%;
     border: 5px solid indianred;
     font-size: 24px;
-}
+} */
 
 /* 
 .thor-gif {

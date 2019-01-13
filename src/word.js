@@ -3,13 +3,13 @@ class Word {
         this.pickedWords = [];
 
         this.easyWords = [
-            "Bottle", "Coffee", "Meanwhile", "Dianosur", "Pineapple", "Terrorist", "Acieve", "Retrive", "Opposite", "Significantly"
+            "Bottle", "Environment", "Immediately", "Independent", "Coffee", "Meanwhile", "Dianosur", "Pineapple", "Terrorist", "Acieve"
         ];
 
         this.length = this.easyWords.length;
 
         this.toughWords = [
-            "Santa's", "Abrogate", "Accomodate", "Indict", "Cementry", "Embarass", "Convalesce", "Carrabian", "Abnegation","Treacherous", "Environment", "Immediately", "Independent"
+            "Santa's", "Abrogate", "Accomodate", "Indict", "Cementry", "Embarass", "Convalesce", "Carrabian", "Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly"
         ];
     }
 

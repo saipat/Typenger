@@ -1,5 +1,4 @@
 import ScoreBoard from './score_board';
-import Play from './play';
 import Word from './word';
 import Timer from './timer';
 import { log } from 'util';
@@ -10,9 +9,9 @@ import { log } from 'util';
         this.timer = new Timer();
         this.scoreBoard = new ScoreBoard(this.word.wordsLength());
         this.wordToDisplay = '';
-        this.inputEvent = document.querySelector('#word-input');
+        this.wordInputEl = document.querySelector('#word-input');
 
-        this.inputEvent.addEventListener("keyup", (e) => {
+        this.wordInputEl.addEventListener("keyup", (e) => {
             // Number 13 is the "Enter" key on the keyboard
             if (e.keyCode === 13) {
                 console.log("e ----> ", e);
@@ -23,26 +22,29 @@ import { log } from 'util';
     }
 
     play() {
-        this.inputEvent.value = '';
+        this.wordInputEl.value = '';
+        
         this.wordToDisplay = this.word.pickEasyWord();
         if (!this.wordToDisplay) {
-            this.scoreBoard.displayMessage();
+            this.scoreBoard.updateBoard();
             return;
         } else {
             document.querySelector('#current-word').innerHTML = this.wordToDisplay;
         }
+
         this.timer.start(() => {
             console.log("Timer Done");
             this.compareWords();
-        });  
-    }
+        });
 
-    showCurrentWord() {
-        
+        if(this.scoreBoard.updateBoard()) {
+            this.timer.stop();
+            console.log("Game Ended");
+        }
     }
 
     compareWords() {
-        if (this.inputEvent.value === this.wordToDisplay) {
+        if (this.wordInputEl.value === this.wordToDisplay) {
             this.scoreBoard.incThor();
         } else {
             //change the input color to red.
@@ -51,9 +53,10 @@ import { log } from 'util';
         this.play();
     }
 
-    init() {
-        const game = document.querySelector('div.game');
-
+    stop() {
+        this.timer.stop();
+        this.scoreBoard.reset();
+        this.wordInputEl.value = '';
     }
 
 }
