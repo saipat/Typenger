@@ -67,20 +67,27 @@
 }
 
 .rules-input{
-    padding-left: 87%;
-    margin-top: 16%;
     display: flex;
     flex-direction: row;
+    left: 42%;
+    position: fixed;
+    /* top: 23%; */
 }
 
-.countdown {
+#seconds {
+    color: red;
+    font-size: 56px;
+    padding: 0 10px;
+}
+
+/* .countdown {
     color: white;
     width: 50%;
     line-height: 1.4;
     margin-top: -30px;
     font-size: 18px;
 
-}
+} */
 
 #current-word {
     color: red;
@@ -95,21 +102,19 @@
 }
 
 #word-input {
+    
     color: blue;
     padding: 1% 7%;
     margin-left: 41%;
-    margin-top: 1%;
+    margin-top: 7%;
     position: fixed;
     font-size: 20px;
     border: 2px solid red;
     border-radius: 5px;
+    /* opacity: .3; */
+    /* background-color: blue; */
 }
 
-#seconds {
-    color: red;
-    font-size: 30px;
-    padding: 0 10px;
-}
 
 .how-to #isWon-message {
     color: red;
