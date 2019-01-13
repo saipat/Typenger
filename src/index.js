@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const thorScore = document.querySelector('#thor-score');
     const thanosScore = document.querySelector('#thanos-score');
     const timeDisplay = document.querySelector('#time-left');
-    const seconds = document.querySelector('#seconds');
 
     playButton.addEventListener('click', function (event) {
         if (instructions.className.includes('hidden')) {
@@ -29,24 +28,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    let count = 5;
+    let count = 2;
 
     startButton.addEventListener('click', function (event) {
-        // var interval = setInterval(function () {
-        //     console.log(--count);
-        //     if (count === 1) {
-        //         clearInterval(interval);
+        var interval = setInterval(function () {
+            console.log(--count);
+            if (count === 1) {
+                clearInterval(interval);
 
-        //         const showOnStart = document.querySelector('#showOnStart');
+                const showOnStart = document.querySelector('#showOnStart');
 
-        //         if (showOnStart.className.includes('hidden')) {
-        //             showOnStart.className = showOnStart.className.replace('hidden', '');
-        //         }
-        //         count = 5;
-        //     }
-        // }, 400);
+                if (showOnStart.className.includes('hidden')) {
+                    showOnStart.className = showOnStart.className.replace('hidden', '');
+                }
+                count = 2;
+            }
+        }, 400);
 
         game.play();
+        
     });
 
 

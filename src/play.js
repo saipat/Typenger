@@ -13,8 +13,7 @@ class Play{
         console.log("the picked word:----> ", random);
 
 
-        let d = new Date();
-        start = d.getSeconds();
+        
     }
 
     //display a random word - call the method in the game file. 

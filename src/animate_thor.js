@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //create a new Image object and specify the source
     var thorSheet = new Image();
     thorSheet.src = "../images/t2.png";
-    var count = 3;
+    var count = 378;
 
     function thorSprite(options) {
         var that = {},
@@ -34,10 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 // if (dx === 1000) {
                 //      dx = 0;
                 // }
-                // } else {
-                //      frameIndex = 0;
-                // }
-            }
+                } else {
+                     frameIndex = 0;
+                }
         };
 
         //Add the width to the destination x every time and keep the height the same.
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 that.height,
                 0,
                 0,
-                that.width / numberOfFrames - 2,
+                that.width / numberOfFrames - 1,
                 that.height);
         };
 
@@ -72,10 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var thor = new thorSprite({
         context: canvas.getContext("2d"),
-        width: 5000,
+        width: 9000,
         height: 300,
         image: thorSheet,
-        numberOfFrames: 5
+        numberOfFrames: 16
     });
 
 
