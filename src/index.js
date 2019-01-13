@@ -44,17 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
         showOnStart.className += ' hidden';
     });
 
-    
-
-    // logo.addEventListener('click', function (event) {
-    //     console.log(event);
-
-    //     if (animation.className.includes('hidden')) {
-    //         animation.className = animation.className.replace('hidden', '');
-    //     } else {
-    //         animation.className += 'hidden';
-    //     }
-    // });
-
-
 });

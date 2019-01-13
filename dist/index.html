@@ -9,42 +9,62 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
     <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
     <!-- <script src="../src/logo.js"></script>
     <script src="../src/animate_thor.js"></script> -->
-
 </head>
 
 <body class="main">
     <div id="bg">
         <img src="../images/original.gif" alt="avengers wallpaper"/>
     </div>
+
+    <div class="sound">
+        <nav>
+            <div class="controls">
+                <!-- <a class="rewind">
+                    <svg width="26" height="16" viewBox="160 18 26 16" xmlns="http://www.w3.org/2000/svg" class="rewind-icon">
+                        <path d="M173.3 26.143l12 6.857V18.778l-12 6.857v-6.857l-12.444 7.11L173.3 33v-6.857z" fill="#A8B5C3"
+                            fill-rule="evenodd" /></svg>
+                </a> -->
+                <a class="play">
+                    <svg width="21" height="24" viewBox="210 14 21 24" xmlns="http://www.w3.org/2000/svg" class="play-icon">
+                        <path fill="#b30000" fill-rule="evenodd" d="M230.677 25.815L210 37.63V14" /></svg>
+                    <svg width="21px" height="24px" viewBox="210 14 21 24" xmlns="http://www.w3.org/2000/svg" class="pause-icon">
+                        <rect id="pause-1" fill="#b30000" fill-rule="evenodd" x="210" y="14" width="7" height="24"></rect>
+                        <rect id="pause-2" fill="#b30000" fill-rule="evenodd" x="224" y="14" width="7" height="24"></rect>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <audio src="../src/The-Avengers-Theme-Song.mp3"></audio>
+    </div>
+    
     
     <div class="game">
 
         <div class="title">
-            <h1 class="game-title">Welcome to Typenger!</h1>
-            <p class="instructions">You are Thor. The fate of the universe is in your hands! Type words that are shown to you correctly. For every mis-typed word, Thor will get a hit and every correctly typed word Thanos will get a hit.
+            <h1 class="game-title">Typenger</h1>
+            <p class="instructions">You are Thor. The fate of the universe is in your hands! Type words that are shown to you correctly in <span>5 </span> seconds. For every mis-typed word, Thor will get a hit and every correctly typed word Thanos will get a hit.
                 <span>When you are ready, click start. Good Luck Thor!</span>
             </p>
         </div>
 
-        <div>
-            <div class="how-to">
-                <button id="start-btn" class="btn">Start</button>
-                <button id="stop-btn" class="btn stop-btn">Stop</button>
-                <div >
-                    <div class="rules-input">
-                        <p class="rules">
-                            Type the word shown in <span id="seconds">5  </span>seconds.
-                        </p>
-                        <h1 id="current-word"></h1>
-                    </div>
-                    <div>
-                        <input type="text" className="player-input" id="word-input" placeholder="    Start typing" autofocus/>
-                        <p id="isWon-message"></p>
-                    </div>
+        <div class="how-to">
+            <button id="start-btn" class="btn">Start</button>
+            <button id="stop-btn" class="btn stop-btn">Stop</button>
+            <div>
+                <div class="rules-input">
+                    <p class="rules">
+                        <span id="seconds">5</span>
+                    </p>
+                    <h1 id="current-word"></h1>
                 </div>
-                
+                <div>
+                    <input type="text" className="player-input" id="word-input" placeholder="    Start typing" autofocus/>
+                    <p id="isWon-message"></p>
+                </div>
             </div>
         </div>
 
@@ -85,6 +105,7 @@
     <!-- <canvas id="ThorAnimation" class="thor-animation">
 
     </canvas> -->
+    <script src="../src/sound.js"></script>
     <script type="text/javascript" src="./main.js"></script>
 </body>
 
