@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
             game = new Game();
         }
         const showOnStart = document.querySelector('#showOnStart');
-            showOnStart.className = showOnStart.className.replace('hidden', '');
-        
-        
+        showOnStart.className = showOnStart.className.replace('hidden', '');
+
         game.play();
+
     });
 
     stopButton.addEventListener('click', function() {

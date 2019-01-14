@@ -34,6 +34,7 @@
 .game-title {
     width: 150%;
     text-shadow: 2px 2px #ff0000;
+    letter-spacing: 10px;
 }
 
 .instructions {
@@ -128,7 +129,7 @@
 
 .sound {
     position: absolute;
-    left: 14%;
+    left: 19%;
     top: 6%;
 }
 
