@@ -186,7 +186,9 @@ nav {
 #thorAnimation,
 #coinAnimation {
     position: fixed;
-    top: 58%;
+    top: 47%;
     left: 20%;
+    transition: width 1.5s ease-in-out;
+    /* animation-duration: 10s; */
     /* opacity: .3; */
 }
