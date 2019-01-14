@@ -15,25 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let count = 2;
 
     startButton.addEventListener('click', function (event) {
-        // var interval = setInterval(function () {
-        //     console.log(--count);
-        //     if (count === 1) {
-        //         clearInterval(interval);
-
-        //         const showOnStart = document.querySelector('#showOnStart');
-
-        //         if (showOnStart.className.includes('hidden')) {
-        //             showOnStart.className = showOnStart.className.replace('hidden', '');
-        //         }
-        //         count = 2;
-        //     }
-        // }, 400);
         if(!game){
             game = new Game();
         }
         const showOnStart = document.querySelector('#showOnStart');
         showOnStart.className = showOnStart.className.replace('hidden', '');
-
+        document.getElementById('word-input').focus();
         game.play();
 
     });

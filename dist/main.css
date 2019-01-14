@@ -88,13 +88,14 @@
 #current-word {
     color: red;
     text-shadow: 2px 2px white;
-    font-family: 'Graduate';
+    font-family: 'ariel';
     letter-spacing: 11px;
     font-size: 40px;
     position: fixed;
     text-align: right;
     left: 64%;
     top: 17%;
+    text-transform: lowercase;
 }
 
 #word-input {
@@ -107,6 +108,7 @@
     font-size: 20px;
     border: 2px solid red;
     border-radius: 5px;
+    text-transform: lowercase;
     /* opacity: .3; */
     /* background-color: blue; */
 }
@@ -179,4 +181,12 @@ nav {
 
 .score-board p, .score-board h4 {
     letter-spacing: 1.5px;
+}
+
+#thorAnimation,
+#coinAnimation {
+    position: fixed;
+    top: 58%;
+    left: 20%;
+    /* opacity: .3; */
 }

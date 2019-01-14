@@ -1,20 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     //create a new Image object and specify the source
-    let spriteSheet = new Image();
-    spriteSheet.src = "../images/t3.png";
-    
-    let dx = 0;
+    var spriteSheet = new Image();
+    spriteSheet.src = "http://i.stack.imgur.com/b0HwN.jpg";
 
     //define sprite class
     function sprite(options) {
 
-        let that = {},
+        var that = {},
             frameIndex = 0,
             tickCount = 0,
             ticksPerFrame = options.ticksPerFrame || 0,
-            numberOfFrames = options.numberOfFrames || 1,
-            dx = options.dx || 0;
+            numberOfFrames = options.numberOfFrames || 1;
 
         that.context = options.context;
         that.width = options.width;
@@ -34,15 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (frameIndex < numberOfFrames - 1) {
                     // Go to the next frame
                     frameIndex += 1;
-                    dx += 1;
                 } else {
                     frameIndex = 0;
                 }
             }
-        };
-
-        that.updateSquares = function() {
-
         };
 
         that.render = function () {
@@ -57,30 +49,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 0,
                 that.width / numberOfFrames,
                 that.height,
-                dx,
                 0,
-                that.width / numberOfFrames - 100,
+                0,
+                that.width / numberOfFrames,
                 that.height);
         };
 
         return that;
     }
 
-    var canvas = document.getElementById("thorAnimation");
-    canvas.width = 1000;
-    canvas.height = 1000;
+    var canvas = document.getElementById("coinAnimation");
+    canvas.width = 100;
+    canvas.height = 100;
 
-    var thor = new sprite({
+    var coin = new sprite({
         context: canvas.getContext("2d"),
-        width: 4400,
-        height: 1000,
+        width: 440,
+        height: 100,
         image: spriteSheet,
-        numberOfFrames: 12
+        numberOfFrames: 10
     });
 
     function gameLoop() {
-        thor.update();
-        thor.render();
+        coin.update();
+        coin.render();
         window.requestAnimationFrame(gameLoop);
     }
 

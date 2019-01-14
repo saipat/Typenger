@@ -17,6 +17,7 @@ class Word {
         let randomIndex = Math.floor(Math.random() * this.easyWords.length);
         let word = this.easyWords[randomIndex];
         this.easyWords.splice(this.easyWords.indexOf(word), 1); 
+        console.log("word =======> ", word.toLowerCase());
         return word;
     }
 

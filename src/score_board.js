@@ -22,15 +22,16 @@ import Game from './game';
     }
 
     isWon() {
-         if (this.thorScore > this.winningScore) {
-            return 'Thor';
-         } else if (this.thanosScore > this.winningScore) {
+        if (this.thorScore > this.winningScore) {
+             return 'Thor';
+        } else if (this.thanosScore > this.winningScore) {
             return 'Thanos';
-         } else if (this.thorScore <= this.winningScore && this.thanosScore <= this.winningScore) {
-            return '';
-         }else if (this.thorScore === this.thanosScore){
+        } else if (this.thorScore === this.winningScore && this.thanosScore === this.winningScore) {
             return 'Tie';
-         } 
+        }
+        else if (this.thorScore <= this.winningScore && this.thanosScore <=               this.winningScore) {
+        return '';
+        }
     }
 
     updateBoard() {
@@ -38,15 +39,17 @@ import Game from './game';
         let hasWinner = false;
         console.log('hi');
 
+        
         if (win === 'Thor') {
-            this.winnerEl.innerHTML = 'Congratulations Thor! you saved the world.';
+            this.winnerEl.innerHTML = 'Congratulations Thor! You saved the world!';
             hasWinner = true;
-        } else if (win === 'Thanos') {
-            this.winnerEl.innerHTML = 'Sorry! You Loose!';
+        }else if (win === 'Thanos') {
+            this.winnerEl.innerHTML = 'You Loose! You should have aimed for the head!';
             hasWinner = true;
         } else if (win === 'Tie') {
             this.winnerEl.innerHTML = 'It is a Tie. You both Sucks!';
-        } else {
+        }
+         else {
             this.winnerEl.innerHTML = '';
         }
 

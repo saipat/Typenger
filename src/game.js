@@ -25,6 +25,7 @@ import { log } from 'util';
         this.wordInputEl.value = '';
         
         this.wordToDisplay = this.word.pickEasyWord();
+        console.log("Display word ======> ", this.wordToDisplay.toLowerCase());
         if (!this.wordToDisplay) {
             this.scoreBoard.updateBoard();
             return;
@@ -44,7 +45,7 @@ import { log } from 'util';
     }
 
     compareWords() {
-        if (this.wordInputEl.value === this.wordToDisplay) {
+        if (this.wordInputEl.value.toLowerCase() === this.wordToDisplay.toLowerCase()) {
             this.scoreBoard.incThor();
         } else {
             //change the input color to red.

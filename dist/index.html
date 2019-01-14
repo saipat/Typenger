@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
-    <!-- <script src="../src/logo.js"></script>
-    <script src="../src/animate_thor.js"></script> -->
+     <!-- <script src="../src/logo.js"></script> -->
+    <!-- <script src="../src/animation.js"></script>  -->
 </head>
 
 <body class="main">
@@ -56,7 +56,7 @@
                     <h1 id="current-word"></h1>
                 </div>
                 <div>
-                    <input type="text" className="player-input" id="word-input" placeholder="    Start typing" autofocus/>
+                    <input autofocus type="text" className="player-input" id="word-input" placeholder="    Start typing"/>
                     
                 </div>
             </div>
@@ -70,8 +70,6 @@
         <div id="showOnStart" class="hidden">
             <div class="score-board">
                 <h2>Score Board</h2>
-                <p>Time left :
-                    <span id="time-left"> 0</span></p>
                 <h4>Thor :
                     <span id="thor-score" class="score"> 0 </span>
                 </h4>
@@ -94,10 +92,11 @@
     </canvas> -->
 
     <!-- <img src="../images/tenor.gif" alt="thanos.gif" class="thanos-gif">  -->
-    <!-- <canvas id="ThorAnimation" class="thor-animation">
-
-    </canvas> -->
+    <canvas id="thorAnimation" class="thor-animation">
+        
+    </canvas>
     <script src="../src/sound.js"></script>
+    <script src="../src/animate_thor.js"></script>
     <script type="text/javascript" src="./main.js"></script>
 </body>
 
