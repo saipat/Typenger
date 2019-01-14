@@ -22,11 +22,6 @@
     <div class="sound">
         <nav>
             <div class="controls">
-                <!-- <a class="rewind">
-                    <svg width="26" height="16" viewBox="160 18 26 16" xmlns="http://www.w3.org/2000/svg" class="rewind-icon">
-                        <path d="M173.3 26.143l12 6.857V18.778l-12 6.857v-6.857l-12.444 7.11L173.3 33v-6.857z" fill="#A8B5C3"
-                            fill-rule="evenodd" /></svg>
-                </a> -->
                 <a class="play">
                     <svg width="21" height="24" viewBox="210 14 21 24" xmlns="http://www.w3.org/2000/svg" class="play-icon">
                         <path fill="#b30000" fill-rule="evenodd" d="M230.677 25.815L210 37.63V14" /></svg>
@@ -62,10 +57,15 @@
                 </div>
                 <div>
                     <input type="text" className="player-input" id="word-input" placeholder="    Start typing" autofocus/>
-                    <p id="isWon-message"></p>
+                    
                 </div>
             </div>
         </div>
+
+        <div class="winner">
+            <p id="isWon-message"></p>
+        </div>
+
 
         <div id="showOnStart" class="hidden">
             <div class="score-board">

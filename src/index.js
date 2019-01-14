@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const showOnStart = document.querySelector('#showOnStart');
             showOnStart.className = showOnStart.className.replace('hidden', '');
         
-
+        
         game.play();
     });
 
@@ -45,3 +45,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+

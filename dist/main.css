@@ -80,14 +80,9 @@
     padding: 0 10px;
 }
 
-/* .countdown {
-    color: white;
-    width: 50%;
-    line-height: 1.4;
-    margin-top: -30px;
-    font-size: 18px;
-
-} */
+.hidden {
+    display: none;
+}
 
 #current-word {
     color: red;
@@ -116,12 +111,13 @@
 }
 
 
-.how-to #isWon-message {
+#isWon-message {
     color: red;
-    font-size: 22px;
-    margin-left: 38%;
-    padding-left: 20%;
+    font-size: 32px;
+    margin-left: 35%;
     margin-top: 5%;
+    text-shadow: 2px 2px white;
+    letter-spacing: 4.2px;
 }
 
 .btn:hover {
