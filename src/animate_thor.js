@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     thanosSheet.src = '../Images/e.png';
     
     let countThor = 500;
-    let countThanos = 498;
+    let countThanos = 356;
 
     //define sprite class
     function sprite(options) {
 
         let that = {},
+            moveFrame = 1,
             frameIndex = 0,
             tickCount = 0,
             ticksPerFrame = options.ticksPerFrame || 0,
@@ -43,21 +44,21 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         that.move = function() {
-            dx1 += countThor;
-            if (dx1 === 8000) {
-                dx1 = 0;
+            moveFrame += 1;
+            if(moveFrame % 6 === 0) {
+                dx1 += countThor;
+                if (dx1 === 5000) {
+                    dx1 = 0;
+                }
+                dx2 += countThanos;
+                if (dx2 === 7000) {
+                    dx2 = 0;
+                }
             }
-            dx2 += countThanos;
-            if (dx2 === 6720) {
-                dx2 = 0;
-            }
+            
         };
 
         that.render = function (destX, destY) {
-
-            // Clear the canvas
-            // that.context.clearRect(0, 0, that.width, that.height);
-
             // Draw the animation
             that.context.drawImage(
                 that.image,
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     var canvas = document.getElementById("thorAnimation");
-    canvas.width = 1000;
+    canvas.width = 1200;
     canvas.height = 1000;
 
     var thor = new sprite({
@@ -88,8 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var thano = new sprite({
         context: canvas.getContext("2d"),
-        width: 6720,
-        height: 240,
+        width: 7000,
+        height: 500,
         image: thanosSheet,
         numberOfFrames: 19
     });
@@ -103,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         thor.move();
         thano.move();
         thor.render(0, 0);
-        thano.render(560, 100);
+        thano.render(475, 100);
         window.requestAnimationFrame(gameLoop);
     }
 

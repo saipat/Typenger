@@ -186,7 +186,7 @@ nav {
 #thorAnimation{
     position: fixed;
     top: 43%;
-    left: 20%;
+    left: 15%;
     transition: width 1.5s ease-in-out;
     /* animation-duration: 10s; */
     /* opacity: .3; */
