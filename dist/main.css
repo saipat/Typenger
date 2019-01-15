@@ -183,10 +183,9 @@ nav {
     letter-spacing: 1.5px;
 }
 
-#thorAnimation,
-#coinAnimation {
+#thorAnimation{
     position: fixed;
-    top: 47%;
+    top: 43%;
     left: 20%;
     transition: width 1.5s ease-in-out;
     /* animation-duration: 10s; */

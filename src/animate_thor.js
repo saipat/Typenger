@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let spriteSheet = new Image();
     spriteSheet.src = "../images/t1.png";
 
-    // let thanosSheet = new Image();
-    // thanosSheet.src = '../Images/thanos.png';
+    let thanosSheet = new Image();
+    thanosSheet.src = '../Images/e.png';
     
     let countThor = 500;
-    // let countThanos = 498;
+    let countThanos = 498;
 
     //define sprite class
     function sprite(options) {
@@ -18,8 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
             tickCount = 0,
             ticksPerFrame = options.ticksPerFrame || 0,
             numberOfFrames = options.numberOfFrames || 1,
-            dx1 = options.dx1 || 0;
-            // dx2 = options.dx2 || 0;
+            dx1 = options.dx1 || 0,
+            dy = options.dy || 0,
+            dx2 = options.dx2 || 0;
 
         that.context = options.context;
         that.width = options.width;
@@ -46,43 +47,32 @@ document.addEventListener("DOMContentLoaded", function () {
             if (dx1 === 8000) {
                 dx1 = 0;
             }
-            // dx2 += countThanos;
-            // if (dx2 === 9455) {
-            //     dx2 = 0;
-            // }
+            dx2 += countThanos;
+            if (dx2 === 6720) {
+                dx2 = 0;
+            }
         };
 
-        that.render = function () {
+        that.render = function (destX, destY) {
 
             // Clear the canvas
-            that.context.clearRect(0, 0, that.width, that.height);
+            // that.context.clearRect(0, 0, that.width, that.height);
 
             // Draw the animation
             that.context.drawImage(
                 that.image,
                 dx1,
-                0,
+                dy,
                 that.width / numberOfFrames,
                 that.height,
-                0,
-                0,
+                destX,
+                destY,
                 that.width / numberOfFrames,
                 that.height);
             };
-            // that.context.drawImage(
-            //     that.image,
-            //     dx2,
-            //     0,
-            //     that.width / numberOfFrames,
-            //     that.height,
-            //     0,
-            //     0,
-            //     that.width / numberOfFrames,
-            //     that.height);
-            // };
 
         return that;
-    }
+        }
 
     var canvas = document.getElementById("thorAnimation");
     canvas.width = 1000;
@@ -96,26 +86,28 @@ document.addEventListener("DOMContentLoaded", function () {
         numberOfFrames: 16
     });
 
-    // var thano = new sprite({
-    //     context: canvas.getContext("2d"),
-    //     width: 9455,
-    //     height: 485,
-    //     image: thanosSheet,
-    //     numberOfFrames: 19
-    // });
+    var thano = new sprite({
+        context: canvas.getContext("2d"),
+        width: 6720,
+        height: 240,
+        image: thanosSheet,
+        numberOfFrames: 19
+    });
 
     function gameLoop() {
+        // debugger
+        canvas.getContext('2d').clearRect(0, 0, 1000, 1000);
+        
         thor.update();
-        // thano.update();
+        thano.update();
         thor.move();
-        // thano.move();
-        thor.render();
-        // thano.render();
+        thano.move();
+        thor.render(0, 0);
+        thano.render(560, 100);
         window.requestAnimationFrame(gameLoop);
     }
 
-
-
     spriteSheet.addEventListener("load", gameLoop);
+    thanosSheet.addEventListener("load", gameLoop);
 
 });

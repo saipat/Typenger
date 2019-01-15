@@ -1,7 +1,6 @@
 import ScoreBoard from './score_board';
 import Word from './word';
 import Timer from './timer';
-import { log } from 'util';
 
  class Game {
     constructor() {
@@ -10,6 +9,7 @@ import { log } from 'util';
         this.scoreBoard = new ScoreBoard(this.word.wordsLength());
         this.wordToDisplay = '';
         this.wordInputEl = document.querySelector('#word-input');
+        // this.canvasEl = document.querySelector('#thorAnimation');
 
         this.wordInputEl.addEventListener("keyup", (e) => {
             // Number 13 is the "Enter" key on the keyboard
@@ -25,7 +25,6 @@ import { log } from 'util';
         this.wordInputEl.value = '';
         
         this.wordToDisplay = this.word.pickEasyWord();
-        console.log("Display word ======> ", this.wordToDisplay.toLowerCase());
         if (!this.wordToDisplay) {
             this.scoreBoard.updateBoard();
             return;
@@ -34,13 +33,11 @@ import { log } from 'util';
         }
 
         this.timer.start(() => {
-            console.log("Timer Done");
             this.compareWords();
         });
 
         if(this.scoreBoard.updateBoard()) {
             this.timer.stop();
-            console.log("Game Ended");
         }
     }
 
@@ -59,6 +56,13 @@ import { log } from 'util';
         this.scoreBoard.reset();
         this.wordInputEl.value = '';
     }
+
+    // showThor() {
+    //     console.log("has won ======> ", this.scoreBoard.isWon());
+    //     if (this.scoreBoard.isWon() === 'Thor') {
+    //         this.canvasEl.className.replace('hidden', '');
+    //     }
+    // }
 
 }
 
