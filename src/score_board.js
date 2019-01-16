@@ -15,7 +15,6 @@ import Game from './game';
     incThor() {
         this.thorScore += 1;
         this.thorScoreEl.innerHTML = this.thorScore;
-        this.canvasEl.className.replace('hidden', ' ');
     }
 
     incThanos() {
@@ -43,7 +42,6 @@ import Game from './game';
 
         if (win === 'Thor') {
             this.winnerEl.innerHTML = 'Congratulations Thor! You saved the world!';
-            
             hasWinner = true;
         }else if (win === 'Thanos') {
             this.winnerEl.innerHTML = 'You Loose! You should have aimed for the head!';
