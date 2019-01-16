@@ -3,7 +3,7 @@ class Word {
         this.pickedWords = [];
 
         this.easyWords = [
-            "Santa's", "Abrogate", "Accomodate", "Indict", "Cementry", "Embarass", "Convalesce", "Carrabian", "Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly"
+            "Santa's", "Abrogate", "Embarass", "Convalesce", "Carrabian", "Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly", "Typenger", "Bioinformatics", "Mispronounced", "Anathema", "Asterisk", "Defibrillator", "Deteriorate", "Explicit", "Exponentially", "Ignominious", "Massachusetts", "Onomatopoeia", "Phenomenon", "Schadenfreude"
         ];
 
         this.length = this.easyWords.length;
