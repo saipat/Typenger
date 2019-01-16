@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //create a new Image object and specify the source
     let spriteSheet = new Image();
-    spriteSheet.src = "../images/t1.png";
+    spriteSheet.src = "./images/t1.png";
 
     let thanosSheet = new Image();
-    thanosSheet.src = '../Images/e.png';
+    thanosSheet.src = './Images/e.png';
     
     let countThor = 500;
     let countThanos = 356;
