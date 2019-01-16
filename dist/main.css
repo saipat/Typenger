@@ -3,7 +3,7 @@
     top: -50%;
     left: -50%;
     width: 200%;
-    height: 120%;
+    height: 150%;
 }
 
 #bg img {
@@ -51,7 +51,7 @@
 .btn {
     border: 0.1em solid #FFFFFF;
     padding: 10px 36px;
-    margin: 38px 0 60px 9px;
+    margin: 103% 0 60px 9px;
     border-radius: 0.3em;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
@@ -78,7 +78,8 @@
     color: red;
     font-size: 92px;
     padding: 0 10px;
-    margin-top: 40px;
+    margin-top: 12px;
+    margin-left:  3%;
 }
 
 .hidden {
@@ -88,12 +89,12 @@
 #current-word {
     color: red;
     text-shadow: 2px 2px white;
-    font-family: 'ariel';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     letter-spacing: 11px;
     font-size: 44px;
     position: fixed;
     text-align: right;
-    left: 58%;
+    left: 55%;
     top: 19%;
     text-transform: lowercase;
 }
@@ -107,7 +108,6 @@
     font-size: 20px;
     border: 2px solid red;
     border-radius: 5px;
-    text-transform: lowercase;
 }
 
 
@@ -172,7 +172,8 @@ nav {
     line-height: 1.4;
     font-size: 18px;
     position: fixed;
-    top: 40%;
+    top: 46%;
+    left: 6%;
 }
 
 .score-board p, .score-board h4 {
@@ -183,4 +184,9 @@ nav {
     position: fixed;
     top: 45%;
     left: 22%;
+}
+
+.score {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
