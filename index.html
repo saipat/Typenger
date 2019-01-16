@@ -33,11 +33,11 @@
             </div>
         </nav>
 
-        <audio src="./src/The-Avengers-Theme-Song.mp3"></audio>
+        <audio src="./src/The-Avengers-Theme-Song.mp3" loop></audio>
     </div>
     
     
-    <div class="game">
+    <div class="game" id="game">
 
         <div class="title">
             <h1 class="game-title">Typenger</h1>
@@ -47,8 +47,7 @@
         </div>
 
         <div class="how-to">
-            <button id="start-btn" class="btn">Start</button>
-            <button id="stop-btn" class="btn stop-btn">Stop</button>
+            <button id="game-btn" class="btn">Start</button>            
             <div>
                 <div class="rules-input">
                     <p id="seconds"> 5
@@ -56,7 +55,7 @@
                     <h1 id="current-word"></h1>
                 </div>
                 <div>
-                    <input autofocus type="text" className="player-input" id="word-input" placeholder="    Start typing"/>
+                    <input type="text" className="player-input" id="word-input" placeholder="    Click start to play"/>
                     
                 </div>
             </div>

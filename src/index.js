@@ -8,33 +8,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let game = null;
 
-    const startButton = document.getElementById('start-btn');
-    const stopButton = document.getElementById('stop-btn');    
+    const gameButton = document.getElementById('game-btn');
+    // const stopButton = document.getElementById('stop-btn');    
     const canvas = document.getElementById('thorAnimation');
     const wordInput = document.getElementById('word-input');
     const showOnStart = document.querySelector('#showOnStart');
-    
+    const audio = document.querySelector('audio');
+    const gameEl = document.getElementById('game');
 
-    startButton.addEventListener('click', function (event) {    
-        // event.target.innerText
-        if(!game){
+    function doStart() {
+        if (!game) {            
             game = new Game();
-        }        
+            console.log("Created Game", game);
+        }
         showOnStart.className = showOnStart.className.replace('hidden', '');
-        wordInput.focus();
         canvas.className = canvas.className.replace('hidden', '');
-
-        let audio = document.querySelector('audio');
-        audio.play();
-
+        wordInput.disabled = false;
+        wordInput.focus();
+        if (audio.paused) {
+            audio.play();
+        }
         game.play();
-    });
+    }
 
-    stopButton.addEventListener('click', function() {
+    function doStop() {
         game.stop();
         game = null;
         showOnStart.className += ' hidden';
         canvas.className += ' hidden';
+        wordInput.disabled = true;
+    }
+
+    gameButton.addEventListener('click', function (event) {
+        var buttonText = event.target.innerText;
+
+        if (buttonText === 'Start') {
+            doStart();
+            event.target.innerText = 'Stop';
+        }
+
+        if (buttonText === 'Stop') {
+            doStop();
+            event.target.innerText = 'Start';
+        }        
     });
 
+    gameEl.addEventListener('gamecomplete', (event) => {
+        // game is complete, no need to "stop" it
+        console.log("Game Complete");        
+        game = null;
+        canvas.className += ' hidden';
+        wordInput.disabled = true;
+        gameButton.innerText = 'Start';
+    });
 });

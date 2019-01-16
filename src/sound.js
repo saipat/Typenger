@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     audio.addEventListener('ended', () => {
         pauseTrack();
     });

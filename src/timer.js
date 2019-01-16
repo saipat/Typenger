@@ -12,7 +12,7 @@ class Timer {
             --this.time;
             this.timerEl.innerHTML = this.time + " ";
             if (this.time === 0) {
-                console.log("this.time ---->", this.time);
+                console.log("this.interval ---->", this.interval);
                 clearInterval(this.interval);
                 callbackFn();
             }
@@ -20,6 +20,7 @@ class Timer {
     }
 
     stop() {
+        console.log("Timer Stop", this.interval);
         clearInterval(this.interval);
         this.timerEl.innerHTML = 5 + " ";
     }
