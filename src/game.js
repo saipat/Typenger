@@ -38,7 +38,7 @@ import Timer from './timer';
         });
 
         if(this.scoreBoard.updateBoard()) {
-            console.log('Stopping Timer');
+            // console.log('Stopping Timer');
             this.timer.stop();
             this.gameEl.dispatchEvent(new Event('gamecomplete'));
         }

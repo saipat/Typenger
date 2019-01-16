@@ -23,12 +23,13 @@ import Game from './game';
     }
 
     isWon() {
-        console.log("this ===> ", this);
+        // console.log("this ===> ", this);
         if (this.thorScore > this.winningScore) {
              return 'Thor';
         } else if (this.thanosScore > this.winningScore) {
             return 'Thanos';
         } else if (this.thorScore === this.winningScore && this.thanosScore ===     this.winningScore) {
+            console.log("It;s a tie");
             return 'Tie';
         } else if (this.thorScore <= this.winningScore && this.thanosScore <=                   this.winningScore) {
             return '';
@@ -37,7 +38,7 @@ import Game from './game';
 
     updateBoard() {
         let win = this.isWon();
-        console.log("Winner Winner", win);
+        // console.log("Winner Winner", win);
         let hasWinner = false;        
         if (win === 'Thor') {
             this.winnerEl.innerHTML = 'Congratulations Thor! You saved the world!';
@@ -47,6 +48,7 @@ import Game from './game';
             hasWinner = true;
         } else if (win === 'Tie') {
             this.winnerEl.innerHTML = 'It is a Tie. You both Sucks!';
+            hasWinner = true;
         } else {
             this.winnerEl.innerHTML = '';
         }
