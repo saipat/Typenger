@@ -11,9 +11,9 @@ This game is inspired by TypeRacer and Avengers.
 ### Functionality
 
 * Players type a word seen on the screen. 
-* For every correct word thay type, Thor will strike Thanos and Thanos will loose his energy by one point and vice versa.
+* For every correct word thay type, Thor will gain one point and vice versa.
 * Set the timer. Give them 1 or 2 words in  every 5 seconds.
-* The game ends if either of them loses all their energy.
+* The game ends if one of them wins or it's tie.
 
 ### Wireframes
 
@@ -29,7 +29,7 @@ This game is inspired by TypeRacer and Avengers.
 ### MVP
 
 - [ ] Generate random words that player can type.
-- [ ] Start, pause, stop and new game buttons.
+- [ ] Start and stop buttons.
 - [ ] Basic visuals and an interactive interface.
 - [ ] Determine the winner.
 - [ ] Write instructions on how to play the game.
