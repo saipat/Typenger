@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spriteSheet.src = "./images/t1.png";
 
     let thanosSheet = new Image();
-    thanosSheet.src = './Images/e.png';
+    thanosSheet.src = './images/e.png';
     
     let countThor = 500;
     let countThanos = 356;
