@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     thanosSheet.src = './images/e.png';
     
     let countThor = 500;
-    let countThanos = 356;
+    let countThanos = 500;
 
     //define sprite class
     function sprite(options) {
@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         that.move = function() {
             moveFrame += 1;
-            if(moveFrame % 6 === 0) {
+            if(moveFrame % 15 === 0) {
                 dx1 += countThor;
                 if (dx1 === 5000) {
                     dx1 = 0;
                 }
                 dx2 += countThanos;
-                if (dx2 === 7000) {
+                if (dx2 === 7700) {
                     dx2 = 0;
                 }
             }
@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var thano = new sprite({
         context: canvas.getContext("2d"),
-        width: 7000,
+        width: 7700,
         height: 500,
         image: thanosSheet,
-        numberOfFrames: 19
+        numberOfFrames: 20
     });
 
     function gameLoop() {
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         thor.move();
         thano.move();
         thor.render(0, 0);
-        thano.render(475, 100);
+        thano.render(485, 100);
         window.requestAnimationFrame(gameLoop);
     }
 

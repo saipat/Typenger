@@ -2,14 +2,12 @@ import Game from './game';
 import ScoreBoard from './score_board';
 import Level from './levels';
 
-// window.addEventListener("load", function (event) {
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM fully loaded and parsed");
+    // console.log("DOM fully loaded and parsed");
 
     let game = null;
 
-    const gameButton = document.getElementById('game-btn');
-    // const stopButton = document.getElementById('stop-btn');    
+    const gameButton = document.getElementById('game-btn'); 
     const canvas = document.getElementById('thorAnimation');
     const wordInput = document.getElementById('word-input');
     const showOnStart = document.querySelector('#showOnStart');
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function doStart() {
         if (!game) {            
             game = new Game();
-            console.log("Created Game", game);
+            // console.log("Created Game", game);
         }
         showOnStart.className = showOnStart.className.replace('hidden', '');
         canvas.className = canvas.className.replace('hidden', '');
@@ -55,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gameEl.addEventListener('gamecomplete', (event) => {
         // game is complete, no need to "stop" it
-        console.log("Game Complete");        
+        // console.log("Game Complete");        
         game = null;
         canvas.className += ' hidden';
         wordInput.disabled = true;

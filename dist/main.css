@@ -38,7 +38,7 @@
 }
 
 .instructions {
-    margin-left: -24%;
+    margin-left: -14%;
     margin-right: 5%;
     font-size: 20px;
     font-style: normal;
@@ -72,13 +72,13 @@
     flex-direction: row;
     left: 42%;
     position: fixed;
-    /* top: 23%; */
 }
 
 #seconds {
     color: red;
-    font-size: 56px;
+    font-size: 92px;
     padding: 0 10px;
+    margin-top: 40px;
 }
 
 .hidden {
@@ -90,27 +90,24 @@
     text-shadow: 2px 2px white;
     font-family: 'ariel';
     letter-spacing: 11px;
-    font-size: 40px;
+    font-size: 44px;
     position: fixed;
     text-align: right;
-    left: 64%;
-    top: 17%;
+    left: 58%;
+    top: 19%;
     text-transform: lowercase;
 }
 
 #word-input {
-    
     color: blue;
     padding: 1% 7%;
-    margin-left: 41%;
-    margin-top: 7%;
+    margin-left: 43%;
+    margin-top: 9%;
     position: fixed;
     font-size: 20px;
     border: 2px solid red;
     border-radius: 5px;
     text-transform: lowercase;
-    /* opacity: .3; */
-    /* background-color: blue; */
 }
 
 
@@ -118,7 +115,7 @@
     color: red;
     font-size: 32px;
     margin-left: 35%;
-    margin-top: 5%;
+    margin-top: 8%;
     text-shadow: 2px 2px white;
     letter-spacing: 4.2px;
 }
@@ -173,21 +170,17 @@ nav {
 .score-board {
     color: white;
     line-height: 1.4;
-    margin-left: 0%;
-    margin-top: -15px;
     font-size: 18px;
-    /* font-family: 'Lalezar'; */
+    position: fixed;
+    top: 40%;
 }
 
 .score-board p, .score-board h4 {
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
 }
 
 #thorAnimation{
     position: fixed;
     top: 43%;
-    left: 15%;
-    transition: width 1.5s ease-in-out;
-    /* animation-duration: 10s; */
-    /* opacity: .3; */
+    left: 22%;
 }

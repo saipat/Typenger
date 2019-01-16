@@ -61,13 +61,6 @@ import Timer from './timer';
         delete this.scoreBoard;
     }
 
-    // showThor() {
-    //     console.log("has won ======> ", this.scoreBoard.isWon());
-    //     if (this.scoreBoard.isWon() === 'Thor') {
-    //         this.canvasEl.className.replace('hidden', '');
-    //     }
-    // }
-
 }
 
 
