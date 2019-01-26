@@ -3,13 +3,13 @@ class Word {
         this.pickedWords = [];
 
         this.easyWords = [
-            "Santa's", "Abrogate", "Embarass", "Convalesce", "Carrabian", "Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly", "Typenger", "Bioinformatics", "Mispronounced", "Anathema", "Asterisk", "Defibrillator", "Deteriorate", "Explicit", "Exponentially", "Ignominious", "Massachusetts", "Onomatopoeia", "Phenomenon", "Schadenfreude"
+            "Santa", "Abrogate", "Embarass", "Retrive", "Carrabian", "Change"
         ];
 
         this.length = this.easyWords.length;
 
         // this.toughWords = [
-        //     "Santa's", "Abrogate", "Accomodate", "Indict", "Cementry", "Embarass", "Convalesce", "Carrabian", "Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly"
+        //     "Santa's", "Abrogate", "Accomodate", "Indict", "Cementry", "Embarass", "Convalesce", "Carrabian", "Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly","Abnegation", "Treacherous", "Retrive", "Opposite", "Significantly", "Typenger", "Bioinformatics", "Mispronounced", "Anathema", "Asterisk", "Defibrillator", "Deteriorate", "Explicit", "Exponentially", "Ignominious", "Massachusetts", "Onomatopoeia", "Phenomenon", "Schadenfreude"
         // ];
     }
 
