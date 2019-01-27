@@ -39,3 +39,76 @@ This game is inspired by TypeRacer and Avengers.
 
 ![Imgur](https://i.imgur.com/IpMNpdr.png)
 
+For Animation:
+
+```JS
+ <canvas id="thorAnimation" class="thor-animation hidden">
+ </canvas>
+ 
+  that.render = function (destX, destY) {
+            // Draw the animation
+            that.context.drawImage(
+                that.image,
+                dx1,
+                dy,
+                that.width / numberOfFrames,
+                that.height,
+                destX,
+                destY,
+                that.width / numberOfFrames,
+                that.height);
+            };
+
+        return that;
+   }
+   
+   var canvas = document.getElementById("thorAnimation");
+    canvas.width = 1200;
+    canvas.height = 1000;
+
+    var thor = new sprite({
+        context: canvas.getContext("2d"),
+        width: 8000,
+        height: 500,
+        image: spriteSheet,
+        numberOfFrames: 16
+    });
+
+    var thano = new sprite({
+        context: canvas.getContext("2d"),
+        width: 7700,
+        height: 500,
+        image: thanosSheet,
+        numberOfFrames: 20
+    });
+        
+```
+
+Added event listeners for sound.
+
+```JS
+ <script src="./src/sound.js"></script>
+
+let audio = document.querySelector('audio');
+    let play = document.querySelector('.play');    
+
+    audio.addEventListener('play', playTrack);
+    audio.addEventListener('pause', pauseTrack);
+
+    play.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playTrack();
+        } else {
+            audio.pause();
+            pauseTrack();
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        pauseTrack();
+    });
+    
+
+    
+
