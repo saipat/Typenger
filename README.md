@@ -8,6 +8,8 @@ With the help of Typenger, you will pick up typing speed without making any typo
 
 This game is inspired by TypeRacer and Avengers.
 
+![Imgur](https://i.imgur.com/PiWKBH8.png)
+
 ### Functionality
 
 * Players type a word seen on the screen. 
@@ -26,51 +28,14 @@ This game is inspired by TypeRacer and Avengers.
 * Canvas and Sprites for rendering the characters.
 * Webpack to bundle various scripts into a single source.
 
-### MVP
+### Features
 
 - [ ] Generate random words that player can type.
 - [ ] Start and stop buttons.
 - [ ] Basic visuals and an interactive interface.
 - [ ] Determine the winner.
 - [ ] Write instructions on how to play the game.
-
-#### Bonus
-
 - [ ] Background music.
-- [ ] Make Thor hit Thanos and vice Versa creatively.
-- [ ] Display Loading aminators.
-- [ ] Winning animation.
 
-### Development Timeline
+![Imgur](https://i.imgur.com/IpMNpdr.png)
 
-#### January 9, Wednesday
-
-* Work on proposal.
-
-#### January 10, Thursday
-
-* Review JS, canvas and sprites.
-
-#### January 11, Friday
-
-* Set up the skeleton.
-* Make the words show on the screen.
-* Let players type.
-* Compare the words.
-
-#### January 12 & 13, Weekend
-
-* Build points tracker.
-* Implement Thor's way of attacking Thaos.
-
-#### January 14, Monday
-
-* Finish game over condition.
-* Render scoreboard.
-* Write how to instructions.
-* Complete player avator rendering.
-
-#### January 15, Tueaday
-
-* Add background music.
-* Display Loading animation.
